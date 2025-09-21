@@ -1,0 +1,69 @@
+<!--Form Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="container">
+            <a href="https://www.michigan.org/experience-pure-michigan" target="_blank">
+            <img src="michiganImages\Flag_of_Michigan.svg.png" alt="Michigan Flag"></a>
+            <div id="textContainer">
+                <h1>Michigan</h1>
+                <h2>My Home State</h2>
+            </div>
+        </div>
+        <div id="links">
+            <nav>
+                <ul>
+                    <li class="links"><a href="index.html">Home</a></li>
+                    <li class="links"><a href="capital.html">Lansing</a></li>
+                    <li class="links"><a href="hometown.html">Jackson</a></li>
+                    <li class="links"><a href="detroit.html">Detroit</a></li>
+                    <li class="links"><a href="form.html">Form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="form">
+            <img src="michiganImages\51NpmnKZIdL.jpg" id="form" alt="Michigan Cartoon">
+            <p>Please, take a moment to fill out this form!</p>
+            <form action="formResult" method="GET" target="_blank" onsubmit="return validateEmail()">
+                <label for="firstName">First Name:</label>
+                <input name="firstName" id="firstName" placeholder="My first name is...">
+
+                <label for="lastName">Last Name:</label>
+                <input name="lastName" id="lastName" placeholder="My last name is...">
+
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+
+                <label for="confemail">Confirm Email Address:</label>
+                <input type="email" name="confemail" id="confemail" placeholder="Confirm email">
+
+                <label for="questions">Any Questions?</label>
+                <textarea name="questions" id="questions" placeholder="Write questions here..." rows="5" cols="8"></textarea>
+
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+    </section>
+    <script type="text/javascript">
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let confemail = document.getElementById("confemail").value;
+            if (email != confemail) {
+                alert("The emails do not match.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
